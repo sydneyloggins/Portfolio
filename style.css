@@ -1,0 +1,279 @@
+
+/*Universal Selector*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+/*Sets the background color and font of website; user-select set to none so text does not highlight*/
+body {
+    background-color: #b8e1dd;
+    font-family:'Poppins', sans-serif;
+    user-select: none;
+    color:#062925
+    
+}
+
+/*Sets header background color, text font/size, and padding */
+.header {
+    padding: 20px;
+    background-color: #062925;
+    color: #b8e1dd;
+    font-size: 1.5rem;
+    
+}
+/*Sets h1 and navigation bar in horizontal line, creates space between h1 and nav bar*/
+header nav {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/*Sets ul horizontally, creates space between tabs, eliminates bullets using list style type, width of 550px between tabs, font size, when cursor is over tab it is a pointer */
+header ul {
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 550px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;  
+}
+
+/*When hovering over nav bar, tabs turn white and underline*/
+header ul li:hover {
+    color: white;
+    text-decoration: underline;
+
+}
+/*Keeps links from turning purple or underlining once clicked*/
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*Creates style for the cover photo*/
+.hero {
+    height: 20rem;
+    margin-bottom: 25px;
+    background-image: url("https://images.unsplash.com/photo-1678106741653-455a43825002?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+/*Set vertical height of each section so it is consistent*/
+section {
+    min-height: 50vh;
+    
+}
+
+/*Sets margin of main content*/
+.main {
+    margin: 3rem;
+}
+
+/*Sets styles of h2*/
+h2 {
+    color: #062925;
+    font-size: 2rem;
+}
+
+/*Sets font color and size to 'about me' section*/
+.about-me p {
+    color: #062925;
+    font-size: 1.5rem;
+   
+}
+
+/*Sets margin around avatar, creates border-radius and styles border, floats to the right, and sizes image*/
+.about-me img {
+    margin: 0px 100px 40px 100px;
+    border-radius: 50px;
+    border: solid 2px #062925;
+    float: right;
+    max-width: 40rem;
+    max-height: 25rem;
+  
+    
+}
+
+/*Sets font color and size to 'work' section*/
+.work {
+  
+    color: #062925;
+    font-size: 1.5rem; 
+ 
+}
+
+
+.gallery { 
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    gap: 15px;
+    margin: 4rem;
+    
+    
+}
+
+/*Styles the images in the grid, starts at 50% color, creates boarder around images*/
+.gallery-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    border: #062925 solid 2px;
+    
+}
+
+/*When hovering over the image, it transitions to full color over .3 seconds*/
+.gallery-img:hover {
+    filter: grayscale(0%);
+    transition: .3s all ease-in-out;
+
+}
+
+/*Sets images in desired layout within grid*/
+.gallery-item-1 {
+    grid-column: 1 / span 8; 
+    grid-row: 1 / span 3; 
+}
+
+.gallery-item-2 {
+    grid-column: 1 / span 3; 
+    grid-row: 4 / span 3; 
+}
+
+.gallery-item-3 {
+    grid-column: 4 / span 2; 
+    grid-row: 4 / span 3; 
+}
+
+.gallery-item-4 {
+    grid-column: 6 / span 3; 
+    grid-row: 4 / span 3; 
+}
+
+/*Creates small tab in bottom left corner on image to display project name*/
+.image-text {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    padding: 20px;
+    background-color: #062925;
+    color:#b8e1dd
+  }
+
+/*Sets margin, no bullets for list, and margin of resume section*/
+
+
+.resume h2 {
+    margin-bottom: 15px;
+}
+
+
+.resume-content ul li {
+    list-style-type: none;
+    margin: 20px
+    
+}
+
+.contact-me {
+    display: flex;
+    align-items: center;
+    
+    
+    
+}
+/*Puts list in horizontal line, even space between links, no bullets*/
+.contact-me ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none; 
+    width: 60rem;
+  
+    
+    
+   
+}
+
+/*Sets links in contact me section*/
+.contact-me ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color:#062925;
+    font-size: 1.5rem;
+    
+ 
+    
+}
+
+/*When hovering over links, there is an underline*/
+.contact-me ul li a:hover {
+    text-decoration: underline;
+}
+
+/*Footer styling*/
+footer {
+    padding: 20px;
+    background-color: #062925;
+    color: #b8e1dd;
+    text-align: center;
+    font-size: 30px;
+}
+/*Media Query for responsive layout*/ 
+@media screen and (max-width: 800px) {
+    
+    header nav ul  {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style-type: none;
+        align-items: center;  
+    }
+    .main {
+        margin-left: 20px; 
+    }
+    .about-me p {
+        display: block;
+        font-size: 1rem;
+        text-align: center;
+        
+    }
+    .gallery {
+        display: block;
+        width: 80%;
+        height: 100%;
+        margin: 2.75rem;
+    }
+
+    .contact-me {
+        display: block;
+    }
+    .contact-me ul {
+        display: block;
+        flex-direction: column;
+        list-style-type: none; 
+    }
+
+.about-me img {
+    margin: 0px;
+    border-radius: 50px;
+    border: solid 2px #062925;
+    max-width: 30rem;
+    max-height: 25rem;
+    
+    }
+  .image-text {
+    position: relative;
+    bottom: 10px;
+    left: 0px;
+    padding: 10px;
+    background-color: #062925;
+    color:#b8e1dd;
+   
+  }
+    
+}
