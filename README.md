@@ -12,9 +12,13 @@ I learned how to build a website from scratch and the intricacies of HTML/CSS.
 
 Users can follow this link to access the portfolio: https://sydneyloggins.github.io/Portfolio/
 
+
 ## Usage
 The navigation bar in the top right will bring users to the implied section of the portfolio. Each image under "work" section will link the user to the project (since I am brand new to web development, I created a rough HTML file to link instead of an actual project).
 The links under the "contact me" section will lead the user to the corresponding contact info. 
+
+## Screenshot 
+![Screenshot 2023-03-30 at 5 47 48 AM](https://user-images.githubusercontent.com/125998308/228813628-3f05d212-caa8-45f5-bc7f-ab6468814e47.png)
 
 ## Credits
 I utilized the following websites and tutorials for assistance: 
